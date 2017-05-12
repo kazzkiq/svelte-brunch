@@ -4,6 +4,10 @@
   "description": "Adds Svelte support to Brunch",
   "author": "Claudio Holanda",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kazzkiq/svelte-brunch.git"
+  },
   "dependencies": {
     "svelte": "^1.20.2"
   }
