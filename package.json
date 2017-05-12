@@ -1,0 +1,10 @@
+{
+  "name": "svelte-brunch",
+  "version": "0.1.0",
+  "description": "Adds Svelte support to Brunch",
+  "author": "Claudio Holanda",
+  "license": "MIT",
+  "dependencies": {
+    "svelte": "^1.20.2"
+  }
+}
