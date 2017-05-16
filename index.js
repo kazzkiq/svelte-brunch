@@ -3,9 +3,8 @@
 const svelte = require('svelte');
 
 class SvelteCompiler {
-  constructor (opts) {
-    this.opts = opts;
-
+  constructor (cfg) {
+    this.opts = cfg.plugins.svelte || {};
     this.opts.format = this.opts.format || 'cjs';
 
     this.opts.onerror = err => {
@@ -17,15 +16,8 @@ class SvelteCompiler {
     }
   }
 
-  compile (file) {
-    return new Promise((resolve, reject) => {
-      try {
-        let { code, map } = svelte.compile(file.data, this.opts);
-        resolve(code);
-      } catch (error) {
-        reject(error);
-      }
-    });
+  compile ({data}) {
+    return svelte.compile(data, this.opts).code;
   }
 }
 
